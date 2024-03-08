@@ -1,0 +1,207 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>记录Padavan下transmission更换WEB UI | 鱼香肉丝 一定很好吃！</title>
+<link rel="shortcut icon" href="https://blog.yuxros.icu/favicon.ico?v=1709879684122">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://blog.yuxros.icu/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="记录Padavan下transmission更换WEB UI | 鱼香肉丝 一定很好吃！ - Atom Feed" href="https://blog.yuxros.icu/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZYXY5VNCB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RZYXY5VNCB');
+</script>
+
+
+    <meta name="description" content="1.
+Transmission Web 项目地址
+https://github.com/ronggang/transmission-web-control 
+
+Padavan下WBE UI目录地址为
+/usr/share/transmiss..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://blog.yuxros.icu">
+  <img class="avatar" src="https://blog.yuxros.icu/images/avatar.png?v=1709879684122" alt="">
+  </a>
+  <h1 class="site-title">
+    鱼香肉丝 一定很好吃！
+  </h1>
+  <p class="site-description">
+    既对世俗投以白眼，又与其同流合污
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/snfcx" target="_blank">
+          <i class="ri-github-line"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              记录Padavan下transmission更换WEB UI
+            </h2>
+            <div class="post-info">
+              <span>
+                2023-01-01
+              </span>
+              <span>
+                1 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <h1 id="1">1.</h1>
+<p>Transmission Web 项目地址</p>
+<pre><code>https://github.com/ronggang/transmission-web-control 
+</code></pre>
+<p>Padavan下WBE UI目录地址为</p>
+<pre><code>/usr/share/transmission/
+</code></pre>
+<p>替换即可</p>
+<hr>
+<h1 id="2">2.</h1>
+<p>替换不了<br>
+可以放在挂载u盘里 加入 启动脚本</p>
+<pre><code>### 挂载最新版 transmission-web-control
+mount --bind /media/AiDisk_a1/transmission/src /usr/share/transmission/web
+sleep3
+
+
+原作者: uznEnehC
+参考链接: https://noviachen.github.io/posts/df7bdf3c.html
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://jsd.cdn.zzko.cn/gh/snfcx/img@main/blog/Snipaste_2023-01-01_19-39-46.png" alt="" loading="lazy"></figure>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#1">1.</a></li>
+<li><a href="#2">2.</a></li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://blog.yuxros.icu/post/P3xc62cFh/">
+              <h3 class="post-title">
+                记录padavan路由器系统一些设置
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://blog.yuxros.icu/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

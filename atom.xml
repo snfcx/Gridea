@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://blog.yuxros.icu</id>
+    <title>鱼香肉丝 一定很好吃！</title>
+    <updated>2024-03-08T06:34:46.621Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://blog.yuxros.icu"/>
+    <link rel="self" href="https://blog.yuxros.icu/atom.xml"/>
+    <subtitle>既对世俗投以白眼，又与其同流合污</subtitle>
+    <logo>https://blog.yuxros.icu/images/avatar.png</logo>
+    <icon>https://blog.yuxros.icu/favicon.ico</icon>
+    <rights>All rights reserved 2024, 鱼香肉丝 一定很好吃！</rights>
+    <entry>
+        <title type="html"><![CDATA[在拨号状态下IPV6一段时间后无法使用，失效。]]></title>
+        <id>https://blog.yuxros.icu/post/M9KgL_G7t/</id>
+        <link href="https://blog.yuxros.icu/post/M9KgL_G7t/">
+        </link>
+        <updated>2024-03-08T06:31:55.000Z</updated>
+        <content type="html"><![CDATA[<p><code>ipconfig /renew6</code><br>
+使用这个命令重置</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[BT/PT软件Deluge设置ipv6]]></title>
+        <id>https://blog.yuxros.icu/post/by-Gm0TPA/</id>
+        <link href="https://blog.yuxros.icu/post/by-Gm0TPA/">
+        </link>
+        <updated>2024-01-18T12:27:05.000Z</updated>
+        <content type="html"><![CDATA[<p>Windows下Deluge默认并不会识别电脑上的ipv6地址，只使用v4地址。<br>
+方法：安装插件 <strong>ItConfig</strong> 在设置中找到<strong>Iisten_interfaces</strong><br>
+设置v4+v6地址<br>
+<code>0.0.0.0:2222,[::]:2222</code><br>
+其中2222为使用的端口<br>
+<img src="https://jsd.cdn.zzko.cn/gh/snfcx/img@main/blog/20240118203745.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[怎么把 便携版 程序设置为开机启动]]></title>
+        <id>https://blog.yuxros.icu/post/xBiVQWTpK/</id>
+        <link href="https://blog.yuxros.icu/post/xBiVQWTpK/">
+        </link>
+        <updated>2023-07-10T04:51:24.000Z</updated>
+        <content type="html"><![CDATA[<p>1.复制软件的快捷方式</p>
+<p>2.win+r 打开 运行 。输入 shell:startup</p>
+<p>3.粘贴快捷方式</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythom 打包为EXE 文件运行]]></title>
+        <id>https://blog.yuxros.icu/post/rkXHgTGGt/</id>
+        <link href="https://blog.yuxros.icu/post/rkXHgTGGt/">
+        </link>
+        <updated>2023-02-04T07:17:41.000Z</updated>
+        <content type="html"><![CDATA[<p>分享即用</p>
+<h1 id="安装pyinstaller">安装pyinstaller</h1>
+<p>pip3 install pyinstaller<br>
+执行</p>
+<pre><code> pyinstaller -F test.py
+</code></pre>
+<p>-F参数 覆盖打包</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[记录Padavan下transmission更换WEB UI]]></title>
+        <id>https://blog.yuxros.icu/post/FWF8jTvxW/</id>
+        <link href="https://blog.yuxros.icu/post/FWF8jTvxW/">
+        </link>
+        <updated>2023-01-01T11:24:48.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="1">1.</h1>
+<p>Transmission Web 项目地址</p>
+<pre><code>https://github.com/ronggang/transmission-web-control 
+</code></pre>
+<p>Padavan下WBE UI目录地址为</p>
+<pre><code>/usr/share/transmission/
+</code></pre>
+<p>替换即可</p>
+<hr>
+<h1 id="2">2.</h1>
+<p>替换不了<br>
+可以放在挂载u盘里 加入 启动脚本</p>
+<pre><code>### 挂载最新版 transmission-web-control
+mount --bind /media/AiDisk_a1/transmission/src /usr/share/transmission/web
+sleep3
+
+
+原作者: uznEnehC
+参考链接: https://noviachen.github.io/posts/df7bdf3c.html
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://jsd.cdn.zzko.cn/gh/snfcx/img@main/blog/Snipaste_2023-01-01_19-39-46.png" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[记录padavan路由器系统一些设置]]></title>
+        <id>https://blog.yuxros.icu/post/P3xc62cFh/</id>
+        <link href="https://blog.yuxros.icu/post/P3xc62cFh/">
+        </link>
+        <updated>2022-12-27T02:44:33.000Z</updated>
+        <content type="html"><![CDATA[<p>系统下载地址https://opt.cn2qq.com/padavan/</p>
+<h2 id="开放ipv6端口全部开放">开放ipv6端口全部开放</h2>
+<pre><code>ip6tables -F
+ip6tables -X
+ip6tables -P INPUT ACCEPT
+ip6tables -P OUTPUT ACCEPT
+ip6tables -P FORWARD ACCEPT
+</code></pre>
+<h3 id="开放特殊端口">开放特殊端口</h3>
+<pre><code>ip6tables -A FORWARD -p tcp --dport 5000 -j ACCEPT
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://jsd.cdn.zzko.cn/gh/snfcx/img@main/blog/Snipaste_2022-12-27_10-46-15.png" alt="" loading="lazy"></figure>
+<h3 id="ipv6地址分配设置">ipv6地址分配设置</h3>
+<figure data-type="image" tabindex="2"><img src="https://jsd.cdn.zzko.cn/gh/snfcx/img@main/blog/20221227105006.png" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[在Windows使用mpv播放杜比视界]]></title>
+        <id>https://blog.yuxros.icu/post/Z2CMICk6p/</id>
+        <link href="https://blog.yuxros.icu/post/Z2CMICk6p/">
+        </link>
+        <updated>2022-12-04T10:42:30.000Z</updated>
+        <content type="html"><![CDATA[<p>2024-2-7更新 关于<a href="https://we-bbackups.vercel.app/mpv%E6%92%AD%E6%94%BE%E5%99%A8%20%E7%A1%AC%E4%BB%B6%E8%A7%A3%E7%A0%81%20-%20Wang%20Shuo's%20Blog.html">硬件解码</a><br>
+注：需要安装<strong>HEVC 视频扩展</strong>和<strong>Dolby Vision Extensions</strong></p>
+<p>创建mpv快捷方式在<strong>属性</strong>里修改<strong>目标</strong> 启动项 添加<br>
+<code>--player-operation-mode=pseudo-gui --vo=gpu-nex</code><br>
+<img src="https://jsd.cdn.zzko.cn/gh/snfcx/img@main/blogSnipaste_2022-12-04_18-44-04.png" alt="" loading="lazy"></p>
+<p>mpv与Windows自带播放器对比<br>
+<img src="https://jsd.cdn.zzko.cn/gh/snfcx/img@main/blog/Snipaste_2022-12-04_18-42-11.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[推荐几个靠谱的测速网站&APP]]></title>
+        <id>https://blog.yuxros.icu/post/kYxr8rbFE/</id>
+        <link href="https://blog.yuxros.icu/post/kYxr8rbFE/">
+        </link>
+        <updated>2022-12-04T02:53:58.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="1运营商">1.运营商</h3>
+<p><a href="https://10000.gd.cn/#/speed">广东电信宽带测速平台</a><br>
+<img src="https://s2.loli.net/2022/12/04/lfUiPTgYwZbumAG.png" alt="" loading="lazy"><br>
+<a href="http://106.60.4.62:8091/sts-h5/">云南电信官网测速平台</a><br>
+<img src="https://s2.loli.net/2022/12/04/Zj1Fs3NpCMlwh6B.png" alt="" loading="lazy"></p>
+<h3 id="2大学测速平台">2.大学测速平台</h3>
+<p><a href="https://test.ustc.edu.cn/">中国科学技术大学测速网站</a><br>
+<img src="https://s2.loli.net/2022/12/04/LZwUkaCNREGysrg.png" alt="" loading="lazy"><br>
+<a href="http://speed.neu.edu.cn/">东北大学网络测速</a><br>
+<img src="https://s2.loli.net/2022/12/04/AZ2Jft1Rm34eiXO.png" alt="" loading="lazy"><br>
+<a href="https://iptv.tsinghua.edu.cn/st/">清华大学测速网</a><br>
+<img src="https://s2.loli.net/2022/12/04/ysl4TchHAEXQJjY.png" alt="" loading="lazy"></p>
+<h3 id="3第三方">3.第三方</h3>
+<p><a href="https://www.speedtest.cn/">测速网</a><br>
+<img src="https://s2.loli.net/2022/12/04/QIM7tYLJwrV6KsT.png" alt="" loading="lazy"><br>
+<a href="https://www.speedtest.net">speedtest.net</a><br>
+<img src="https://s2.loli.net/2022/12/04/TL12OvGgbpV7wni.png" alt="" loading="lazy"><br>
+<a href="https://store.steampowered.com/">STEAM</a><br>
+<img src="https://s2.loli.net/2022/12/04/wI6frubhC9oxW2E.png" alt="" loading="lazy"></p>
+<h3 id="4app">4.APP</h3>
+<p><a href="https://consumer.huawei.com/cn/support/content/zh-cn15821163/">花瓣测速</a><br>
+<img src="https://s2.loli.net/2022/12/04/ijJK5ZpMYemPIyz.jpg" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[网络中及cmd常用的命令&知识]]></title>
+        <id>https://blog.yuxros.icu/post/jCQRnYnCB/</id>
+        <link href="https://blog.yuxros.icu/post/jCQRnYnCB/">
+        </link>
+        <updated>2022-12-01T02:22:24.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>查看网络下一跳地址</strong><br>
+<code>tracert</code><br>
+<strong>测试网络联通性</strong><br>
+<code>ping (-t)</code><br>
+<strong>刷新本地的DNS缓存</strong><br>
+<code>ipconfig /flushdns</code></p>
+<h2 id="局域网ip段">局域网ip段</h2>
+<pre><code>     C类：192.168.0.0-192.168.255.255
+     B类：172.16.0.0-172.31.255.255        #小型的局域网
+     A类：10.0.0.0-10.255.255.255         #一般大型局域网用的
+     运营商NAT：100.64.0.0 - 100.127.255.255    #运营商分配的局域网
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello Gridea]]></title>
+        <id>https://blog.yuxros.icu/post/hello-gridea/</id>
+        <link href="https://blog.yuxros.icu/post/hello-gridea/">
+        </link>
+        <updated>2018-12-11T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+<!-- more -->
+<p><a href="https://github.com/getgridea/gridea">Github</a><br>
+<a href="https://gridea.dev/">Gridea 主页</a><br>
+<a href="https://fehey.com/">示例网站</a></p>
+<h2 id="特性">特性👇</h2>
+<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
+<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
+<p>🏷️  你可以对文章进行标签分组</p>
+<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
+<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
+<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
+<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
+<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
+<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
+<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
+<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
+<p>未来，它一定会成为你离不开的伙伴</p>
+<p>尽情发挥你的才华吧！</p>
+<p>😘 Enjoy~</p>
+]]></content>
+    </entry>
+</feed>
